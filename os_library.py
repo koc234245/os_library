@@ -15,6 +15,7 @@ def make_file():
     text_file = open(user_file, "w")
     in_text_message = input("что написать в файле?: ")
     text_file.write(in_text_message)
+    print("Вы создали папку '" + user_folder + "' В ней папку '" + user_folder2 + "' с файлом '" + user_file + "' и написали там '" + in_text_message +"'")
 
 confirmation = input("желаете создать файл? Введите 'да' или 'нет':" )
 match confirmation:
