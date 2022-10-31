@@ -21,9 +21,13 @@ confirmation = input("желаете создать файл? Введите 'д
 match confirmation:
     case "да": 
         make_file()
+        confirmation = eval("True")
+        print(confirmation)
+        print(type(confirmation))
     case "нет":
         print("хорошо")
+        confirmation = eval("False")
+        print(confirmation)
+        print(type(confirmation))
     case _:
         print("Упс, вы что-то не то написали")
-
-    
