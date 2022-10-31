@@ -1,5 +1,6 @@
 import os
 
+
 def make_file():
     user_folder = input("введите имя первой папки: ")
     user_folder2 = input("введите имя второй папки: ")
@@ -17,16 +18,15 @@ def make_file():
     text_file.write(in_text_message)
     print("Вы создали папку '" + user_folder + "' В ней папку '" + user_folder2 + "' с файлом '" + user_file + "' и написали там '" + in_text_message +"'")
 
-confirmation = input("желаете создать файл? Введите 'да' или 'нет':" )
+confirmation = input("желаете создать файл? Введите 'да' или 'нет':" ) == "да"
+
 match confirmation:
-    case "да": 
+    case True: 
         make_file()
-        confirmation = eval("True")
         print(confirmation)
         print(type(confirmation))
-    case "нет":
+    case False:
         print("хорошо")
-        confirmation = eval("False")
         print(confirmation)
         print(type(confirmation))
     case _:
