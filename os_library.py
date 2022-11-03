@@ -18,16 +18,12 @@ def make_file():
     text_file.write(in_text_message)
     print("Вы создали папку '" + user_folder + "' В ней папку '" + user_folder2 + "' с файлом '" + user_file + "' и написали там '" + in_text_message +"'")
 
-confirmation = input("желаете создать файл? Введите 'да' или 'нет':" ) == "да"
-
-match confirmation:
-    case True: 
-        make_file()
-        print(confirmation)
-        print(type(confirmation))
-    case False:
-        print("хорошо")
-        print(confirmation)
-        print(type(confirmation))
-    case _:
-        print("Упс, вы что-то не то написали")
+confirmation = input("желаете создать файл? Введите 'да' или 'нет':" ).lower()
+while confirmation != "нет" or "да": 
+    print("??!?")
+    confirmation = input("желаете создать файл? Введите 'да' или 'нет':" ).lower()
+if confirmation == "да": confirmation = eval("True")
+if confirmation == "нет": confirmation = eval("False")
+print(confirmation)
+print(type(confirmation))
+if(confirmation): make_file()
